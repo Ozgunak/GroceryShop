@@ -14,6 +14,18 @@
 		EF3AE6F827BEA5CB00FFB562 /* Grocery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE6F627BEA5CB00FFB562 /* Grocery.xcdatamodeld */; };
 		EF3AE6FA27BEA5CD00FFB562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3AE6F927BEA5CD00FFB562 /* Assets.xcassets */; };
 		EF3AE6FD27BEA5CD00FFB562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3AE6FB27BEA5CD00FFB562 /* LaunchScreen.storyboard */; };
+		EF3AE70727BEA7B400FFB562 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE70627BEA7B400FFB562 /* Constants.swift */; };
+		EF3AE70927BEA86500FFB562 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE70827BEA86500FFB562 /* MainViewController.swift */; };
+		EF3AE70D27BEAD6900FFB562 /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE70B27BEAD6900FFB562 /* TopCollectionViewCell.swift */; };
+		EF3AE70E27BEAD6900FFB562 /* TopCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3AE70C27BEAD6900FFB562 /* TopCollectionViewCell.xib */; };
+		EF3AE71127BEECA600FFB562 /* MidCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE70F27BEECA600FFB562 /* MidCollectionViewCell.swift */; };
+		EF3AE71227BEECA600FFB562 /* MidCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3AE71027BEECA600FFB562 /* MidCollectionViewCell.xib */; };
+		EF3AE71527BEF29500FFB562 /* BottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE71327BEF29500FFB562 /* BottomCollectionViewCell.swift */; };
+		EF3AE71627BEF29500FFB562 /* BottomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3AE71427BEF29500FFB562 /* BottomCollectionViewCell.xib */; };
+		EF3AE71927BEF56800FFB562 /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE71827BEF56800FFB562 /* FruitModel.swift */; };
+		EF3AE71B27BEF80700FFB562 /* FruitFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE71A27BEF80700FFB562 /* FruitFunctions.swift */; };
+		EF3AE71D27BEFE0000FFB562 /* Fruits.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3AE71C27BEFE0000FFB562 /* Fruits.xcassets */; };
+		EF3AE71F27BF014200FFB562 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE71E27BF014200FFB562 /* CategoriesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +38,18 @@
 		EF3AE6F927BEA5CD00FFB562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF3AE6FC27BEA5CD00FFB562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF3AE6FE27BEA5CD00FFB562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3AE70627BEA7B400FFB562 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EF3AE70827BEA86500FFB562 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EF3AE70B27BEAD6900FFB562 /* TopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF3AE70C27BEAD6900FFB562 /* TopCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF3AE70F27BEECA600FFB562 /* MidCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF3AE71027BEECA600FFB562 /* MidCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MidCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF3AE71327BEF29500FFB562 /* BottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF3AE71427BEF29500FFB562 /* BottomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF3AE71827BEF56800FFB562 /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
+		EF3AE71A27BEF80700FFB562 /* FruitFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitFunctions.swift; sourceTree = "<group>"; };
+		EF3AE71C27BEFE0000FFB562 /* Fruits.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Fruits.xcassets; sourceTree = "<group>"; };
+		EF3AE71E27BF014200FFB562 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +84,42 @@
 			children = (
 				EF3AE6ED27BEA5CB00FFB562 /* AppDelegate.swift */,
 				EF3AE6EF27BEA5CB00FFB562 /* SceneDelegate.swift */,
+				EF3AE70627BEA7B400FFB562 /* Constants.swift */,
+				EF3AE71727BEF54C00FFB562 /* Model */,
+				EF3AE70A27BEAD3000FFB562 /* MainScreen */,
 				EF3AE6F127BEA5CB00FFB562 /* ViewController.swift */,
-				EF3AE6F327BEA5CB00FFB562 /* Main.storyboard */,
 				EF3AE6F927BEA5CD00FFB562 /* Assets.xcassets */,
+				EF3AE71C27BEFE0000FFB562 /* Fruits.xcassets */,
 				EF3AE6FB27BEA5CD00FFB562 /* LaunchScreen.storyboard */,
 				EF3AE6FE27BEA5CD00FFB562 /* Info.plist */,
 				EF3AE6F627BEA5CB00FFB562 /* Grocery.xcdatamodeld */,
 			);
 			path = Grocery;
+			sourceTree = "<group>";
+		};
+		EF3AE70A27BEAD3000FFB562 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EF3AE70827BEA86500FFB562 /* MainViewController.swift */,
+				EF3AE6F327BEA5CB00FFB562 /* Main.storyboard */,
+				EF3AE70B27BEAD6900FFB562 /* TopCollectionViewCell.swift */,
+				EF3AE70C27BEAD6900FFB562 /* TopCollectionViewCell.xib */,
+				EF3AE70F27BEECA600FFB562 /* MidCollectionViewCell.swift */,
+				EF3AE71027BEECA600FFB562 /* MidCollectionViewCell.xib */,
+				EF3AE71327BEF29500FFB562 /* BottomCollectionViewCell.swift */,
+				EF3AE71427BEF29500FFB562 /* BottomCollectionViewCell.xib */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		EF3AE71727BEF54C00FFB562 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF3AE71827BEF56800FFB562 /* FruitModel.swift */,
+				EF3AE71A27BEF80700FFB562 /* FruitFunctions.swift */,
+				EF3AE71E27BF014200FFB562 /* CategoriesModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +180,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3AE70E27BEAD6900FFB562 /* TopCollectionViewCell.xib in Resources */,
 				EF3AE6FD27BEA5CD00FFB562 /* LaunchScreen.storyboard in Resources */,
 				EF3AE6FA27BEA5CD00FFB562 /* Assets.xcassets in Resources */,
+				EF3AE71D27BEFE0000FFB562 /* Fruits.xcassets in Resources */,
+				EF3AE71627BEF29500FFB562 /* BottomCollectionViewCell.xib in Resources */,
 				EF3AE6F527BEA5CB00FFB562 /* Main.storyboard in Resources */,
+				EF3AE71227BEECA600FFB562 /* MidCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +197,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3AE71927BEF56800FFB562 /* FruitModel.swift in Sources */,
+				EF3AE70D27BEAD6900FFB562 /* TopCollectionViewCell.swift in Sources */,
 				EF3AE6F227BEA5CB00FFB562 /* ViewController.swift in Sources */,
+				EF3AE71F27BF014200FFB562 /* CategoriesModel.swift in Sources */,
 				EF3AE6EE27BEA5CB00FFB562 /* AppDelegate.swift in Sources */,
+				EF3AE71527BEF29500FFB562 /* BottomCollectionViewCell.swift in Sources */,
 				EF3AE6F027BEA5CB00FFB562 /* SceneDelegate.swift in Sources */,
+				EF3AE70927BEA86500FFB562 /* MainViewController.swift in Sources */,
 				EF3AE6F827BEA5CB00FFB562 /* Grocery.xcdatamodeld in Sources */,
+				EF3AE70727BEA7B400FFB562 /* Constants.swift in Sources */,
+				EF3AE71B27BEF80700FFB562 /* FruitFunctions.swift in Sources */,
+				EF3AE71127BEECA600FFB562 /* MidCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
