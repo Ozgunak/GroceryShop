@@ -15,4 +15,9 @@ struct K {
     static let BottomCollectionViewCell = "BottomCollectionViewCell"
     static let botCell = "botCell"
     
+    struct segues {
+        static let detailScreenSeque = "detailScreenSeque"
+
+    }
+    
 }
