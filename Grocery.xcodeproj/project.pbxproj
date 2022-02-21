@@ -25,6 +25,8 @@
 		EF0FD67427C3DD04008AA049 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FD67227C3DD04008AA049 /* CartTableViewCell.swift */; };
 		EF0FD67527C3DD04008AA049 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0FD67327C3DD04008AA049 /* CartTableViewCell.xib */; };
 		EF0FD67727C430D5008AA049 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FD67627C430D5008AA049 /* UIViewController+.swift */; };
+		EF0FD67A27C44831008AA049 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FD67927C44831008AA049 /* ProfileViewController.swift */; };
+		EF0FD67C27C4483D008AA049 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0FD67B27C4483D008AA049 /* Profile.storyboard */; };
 		EF3AE6EE27BEA5CB00FFB562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE6ED27BEA5CB00FFB562 /* AppDelegate.swift */; };
 		EF3AE6F027BEA5CB00FFB562 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE6EF27BEA5CB00FFB562 /* SceneDelegate.swift */; };
 		EF3AE6F227BEA5CB00FFB562 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AE6F127BEA5CB00FFB562 /* DetailViewController.swift */; };
@@ -69,6 +71,8 @@
 		EF0FD67227C3DD04008AA049 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		EF0FD67327C3DD04008AA049 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		EF0FD67627C430D5008AA049 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		EF0FD67927C44831008AA049 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EF0FD67B27C4483D008AA049 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		EF3AE6EA27BEA5CB00FFB562 /* Grocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3AE6ED27BEA5CB00FFB562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF3AE6EF27BEA5CB00FFB562 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,15 @@
 				EF0FD67327C3DD04008AA049 /* CartTableViewCell.xib */,
 			);
 			path = CartScreen;
+			sourceTree = "<group>";
+		};
+		EF0FD67827C44810008AA049 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EF0FD67927C44831008AA049 /* ProfileViewController.swift */,
+				EF0FD67B27C4483D008AA049 /* Profile.storyboard */,
+			);
+			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
 		EF3AE6E127BEA5CB00FFB562 = {
@@ -224,6 +237,7 @@
 				EF3AE72227BFD13D00FFB562 /* DetailScreen */,
 				EF0FD66B27C3D7F9008AA049 /* CartScreen */,
 				EF0FD65327C1B678008AA049 /* CategoryScreen */,
+				EF0FD67827C44810008AA049 /* ProfileScreen */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -288,6 +302,7 @@
 			files = (
 				EF0FD65F27C26278008AA049 /* ItemsCollectionViewCell.xib in Resources */,
 				EF0FD65B27C1BE32008AA049 /* CategoryCollectionViewCell.xib in Resources */,
+				EF0FD67C27C4483D008AA049 /* Profile.storyboard in Resources */,
 				EF0FD66A27C29D49008AA049 /* to.xcassets in Resources */,
 				EFEE2FEE27BFD9460015958C /* Main.storyboard in Resources */,
 				EF3AE70E27BEAD6900FFB562 /* TopCollectionViewCell.xib in Resources */,
@@ -330,6 +345,7 @@
 				EF0FD65E27C26278008AA049 /* ItemsCollectionViewCell.swift in Sources */,
 				EF3AE70927BEA86500FFB562 /* MainViewController.swift in Sources */,
 				EF3AE6F827BEA5CB00FFB562 /* Grocery.xcdatamodeld in Sources */,
+				EF0FD67A27C44831008AA049 /* ProfileViewController.swift in Sources */,
 				EFEE2FF227BFEE210015958C /* CategoryFunctions.swift in Sources */,
 				EF0FD65527C1B71C008AA049 /* CategoryViewController.swift in Sources */,
 				EF3AE72127BFCC3E00FFB562 /* CartModel.swift in Sources */,

@@ -104,8 +104,6 @@ extension CategoryViewController: UICollectionViewDataSource {
             cell.categoryImage.image = CategoryFunctions.categories[indexPath.row].categoryImage
             cell.categoryLabel.text = CategoryFunctions.categories[indexPath.row].categoryName
             if indexPath.row == selectedCategory {
-                print(indexPath.row)
-                print(selectedCategory)
                 cell.selectedImage.isHidden = false
             } else {
                 cell.selectedImage.isHidden = true

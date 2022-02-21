@@ -169,7 +169,7 @@
         <!--Main View Controller-->
         <scene sceneID="dqW-gA-aWM">
             <objects>
-                <viewController id="5sM-aY-FQq" customClass="MainViewController" customModule="Grocery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainSB" id="5sM-aY-FQq" customClass="MainViewController" customModule="Grocery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EOd-go-obA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,7 +270,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eb1-AK-mT7"/>
-                                    <barButtonItem title="profile" image="person" catalog="system" id="lCm-Q0-3tP"/>
+                                    <barButtonItem title="profile" image="person" catalog="system" id="lCm-Q0-3tP">
+                                        <connections>
+                                            <action selector="profilePressed:" destination="5sM-aY-FQq" id="YdM-N6-LDt"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="tintColor" name="MainColor"/>
                             </toolbar>
@@ -312,16 +316,17 @@
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="detailScreenSeque" modalPresentationStyle="automatic" id="ZJc-Y2-KM4"/>
                         <segue destination="OOg-ly-enY" kind="presentation" identifier="categoryScreenSeque" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="CSF-L3-jCo"/>
                         <segue destination="Rx6-Av-1DB" kind="show" identifier="mainToCartSegue" id="j0Q-qf-KE4"/>
+                        <segue destination="EaI-ge-mNy" kind="show" identifier="mainToProfileSegue" id="jY4-nP-7V6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yac-cG-pH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="137.94642857142856"/>
         </scene>
-        <!--CategoryScreenID-->
+        <!--CategorySB-->
         <scene sceneID="D0y-3P-QLX">
             <objects>
-                <viewControllerPlaceholder storyboardName="Category" referencedIdentifier="CategoryScreenID" id="OOg-ly-enY" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Category" referencedIdentifier="CategorySB" id="OOg-ly-enY" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="IDI-ya-DPa"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0XQ-Gb-Ohf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -336,7 +341,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfm-Rf-yLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992" y="536"/>
+            <point key="canvasLocation" x="886" y="583"/>
+        </scene>
+        <!--ProfileSB-->
+        <scene sceneID="63U-Pb-qeo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="ProfileSB" id="EaI-ge-mNy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TKd-Jk-k3n"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WdD-1w-lMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="548"/>
         </scene>
     </scenes>
     <resources>

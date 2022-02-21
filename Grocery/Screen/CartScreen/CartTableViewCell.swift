@@ -15,6 +15,8 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var cartItemImage: UIImageView!
     
     var quantity = 1
+    var increasePressed: (() -> ()) = {}
+    var decreasePressed: (() -> ()) = {}
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,17 +35,18 @@ class CartTableViewCell: UITableViewCell {
         cartItemTitle.text = cart.item.title
         cartItemQuantity.text = String(cart.quantity)
         let price = cart.item.price * Double(cart.quantity)
-        cartItemPrice.text = String(price)
-    
+        cartItemPrice.text = String(format: "%.2f", price)
     }
     
     @IBAction func removePressed(_ sender: UIButton) {
     }
     
     @IBAction func plusPressed(_ sender: UIButton) {
+        increasePressed()
     }
     
     @IBAction func minusPressed(_ sender: UIButton) {
+        decreasePressed()
     }
     
 }

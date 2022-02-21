@@ -40,6 +40,16 @@ extension CartViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cartCell, for: indexPath) as! CartTableViewCell
         cell.setCartItem(cart: CartFunctions.cartItems[indexPath.row])
+        cell.increasePressed = {
+            CartFunctions.addItem(item: CartModel(item: CartFunctions.cartItems[indexPath.row].item, quantity: CartFunctions.cartItems[indexPath.row].quantity + 1))
+            self.tableView.reloadData()
+        }
+        cell.decreasePressed = {
+                if CartFunctions.cartItems[indexPath.row].quantity > 0 {
+                    CartFunctions.addItem(item: CartModel(item: CartFunctions.cartItems[indexPath.row].item, quantity: CartFunctions.cartItems[indexPath.row].quantity - 1))
+                    self.tableView.reloadData()
+                }
+        }
         return cell
     }
     

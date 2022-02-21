@@ -27,6 +27,9 @@ struct K {
         static let categoryToDetail = "CategoryToDetail"
         static let mainToCartSegue = "mainToCartSegue"
         static let categoryToCart = "categoryToCart"
+        static let mainToProfileSegue = "mainToProfileSegue"
+
+        
         
     }
     

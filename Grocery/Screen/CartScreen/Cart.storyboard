@@ -57,6 +57,12 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem title="home" image="house" catalog="system" id="Vv1-fF-sJH"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wdu-Gb-ZnC"/>
+                                    <barButtonItem title="categories" image="category" id="qk4-3K-rck"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YAh-pv-ZJR"/>
+                                    <barButtonItem title="Cart" image="cart" catalog="system" id="BaF-pb-iqC"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="t0V-i3-UeB"/>
+                                    <barButtonItem title="profile" image="person" catalog="system" id="r8p-WG-LUZ"/>
                                 </items>
                                 <color key="tintColor" name="MainColor"/>
                             </toolbar>
@@ -83,16 +89,52 @@
                     <connections>
                         <outlet property="emptyCartImage" destination="68i-wd-qVh" id="F9S-Wq-OOv"/>
                         <outlet property="tableView" destination="q3v-bd-Rv4" id="GAY-R9-YNB"/>
+                        <segue destination="XGn-ge-S7P" kind="show" id="k0U-CT-PnK"/>
+                        <segue destination="Gsg-4u-cP8" kind="show" id="unq-nh-l8Q"/>
+                        <segue destination="Szu-pn-sDP" kind="show" id="0t4-tv-W5S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
+        <!--ProfileSB-->
+        <scene sceneID="TFA-Xj-KMC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="ProfileSB" id="Szu-pn-sDP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NMY-fQ-csk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iLI-oT-uB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="539"/>
+        </scene>
+        <!--CategorySB-->
+        <scene sceneID="Niv-DT-rgI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Category" referencedIdentifier="CategorySB" id="Gsg-4u-cP8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Slo-i2-Mya"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryJ-n5-HCq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="556"/>
+        </scene>
+        <!--MainSB-->
+        <scene sceneID="JNz-Ns-xaj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainSB" id="XGn-ge-S7P" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UT6-kb-oY0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IF5-1X-Bq1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107" y="539"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Empty Cart" width="250" height="250"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="category" width="24" height="24"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <namedColor name="MainColor">
             <color red="0.40099999308586121" green="0.67000001668930054" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
