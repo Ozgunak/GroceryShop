@@ -14,27 +14,21 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var bottomImageVıew: UIImageView!
     @IBOutlet weak var itemPrice: UILabel!
     @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var itemQuantity: UILabel!
     
-    var fruit: FruitModel?
-    private var quantity = 0
-    var wrappedQantity: Int {
-        get {
-            return quantity
-        }
-        set {
-            quantity = max(newValue, 0)
-        }
-    }
+    var item: ItemModel?
+    var quantity = 1
+    private var isAdded = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        detailImageView.image = fruit?.image
+        detailImageView.image = item?.image
         bottomImageVıew.layer.cornerRadius = 40
-        bottomImageVıew.backgroundColor = .white
-        itemName.text = fruit?.title
-        itemPrice.text = "10 TL"
+        itemName.text = item?.title
+        itemPrice.text = String(item!.price)
     }
     
 
@@ -43,24 +37,35 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func minusTapped(_ sender: UIButton) {
-        if wrappedQantity > 0 {
-            wrappedQantity -= 1
+        if quantity > 0 {
+            quantity -= 1
         } else {
-            wrappedQantity = 0
+            quantity = 0
         }
         updateUI()
+        //TODO: delete eklenecek
+        
     }
     @IBAction func plusTapped(_ sender: UIButton) {
-        wrappedQantity += 1
+        if isAdded == true {
+            CartFunctions.addItem(item: CartModel(item: item!, quantity: quantity + 1))
+        }
+        quantity += 1
         updateUI()
+        addButton.setTitle("Update Cart", for: .normal)
+        
     }
     
     @IBAction func addTapped(_ sender: UIButton) {
-        // add to cart
+        if let itemModel = item {
+            CartFunctions.addItem(item: CartModel(item: itemModel, quantity: quantity))
+            isAdded = true
+        }
+        addButton.setTitle("\(quantity) On Cart", for: .normal)
     }
     
     func updateUI() {
-        itemQuantity.text = String(wrappedQantity)
+        itemQuantity.text = String(quantity)
     }
 }
 

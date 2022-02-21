@@ -6,53 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct CategoriesModel {
-    struct Drink {
-        let id: UUID
-        let title: String
-        
-        init(title: String) {
-            id = UUID()
-            self.title = title
-        }
-    }
-    struct IceCream {
-        let id: UUID
-        let title: String
-        
-        init(title: String) {
-            id = UUID()
-            self.title = title
-        }
-    }
-    struct Bakery {
-        let id: UUID
-        let title: String
-        
-        init(title: String) {
-            id = UUID()
-            self.title = title
-        }
-    }
-    struct Breakfast {
-        let id: UUID
-        let title: String
-        
-        init(title: String) {
-            id = UUID()
-            self.title = title
-        }
-    }
-    struct Form {
-        let id: UUID
-        let title: String
-        
-        init(title: String) {
-            id = UUID()
-            self.title = title
-        }
-    }
+    var categoryName: String
+    var categoryImage: UIImage
+    var items: [ItemModel]
+    
 }
-
 

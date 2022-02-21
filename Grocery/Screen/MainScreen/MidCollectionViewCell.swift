@@ -15,7 +15,7 @@ class MidCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        midImageView.layer.cornerRadius = 10
+        midImageView.layer.cornerRadius = 20
         midImageView.backgroundColor = .red
     }
 

@@ -16,15 +16,17 @@ class TopCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        topView.layer.cornerRadius = topView.bounds.height / 10
-        topView.layer.shadowOpacity = 1
-        topView.layer.shadowOffset = CGSize.zero
-        topView.layer.shadowColor = UIColor.darkGray.cgColor
+        topView.addShadowAndCornerRadius()
+//        topView.layer.cornerRadius = topView.bounds.height / 10
+//        topView.layer.shadowOpacity = 1
+//        topView.layer.shadowOffset = CGSize.zero
+//        topView.layer.shadowColor = UIColor.darkGray.cgColor
 
-        topImage.layer.cornerRadius = 10
-        topImage.layer.shadowOpacity = 1
-        topImage.layer.shadowOffset = CGSize.zero
-        topImage.layer.shadowColor = UIColor.darkGray.cgColor
+        topImage.addShadowAndCornerRadius()
+//        topImage.layer.cornerRadius = 10
+//        topImage.layer.shadowOpacity = 1
+//        topImage.layer.shadowOffset = CGSize.zero
+//        topImage.layer.shadowColor = UIColor.darkGray.cgColor
 
     }
 

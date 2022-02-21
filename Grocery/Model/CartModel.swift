@@ -7,6 +7,12 @@
 
 import Foundation
 
-struct CartModel {
+class CartModel {
+    let item: ItemModel
+    var quantity: Int
     
+    init(item: ItemModel, quantity: Int) {
+        self.item = item
+        self.quantity = quantity
+    }
 }

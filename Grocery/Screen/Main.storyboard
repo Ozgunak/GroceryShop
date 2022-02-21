@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DetailViewController" customModule="Grocery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailSB" id="BYZ-38-t0r" customClass="DetailViewController" customModule="Grocery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,13 +25,15 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rMu-Hf-QtN">
                                 <rect key="frame" x="0.0" y="317" width="414" height="525"/>
+                                <color key="backgroundColor" name="SecColor"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfY-k8-WWG">
-                                <rect key="frame" x="50" y="20" width="37" height="31"/>
+                                <rect key="frame" x="56" y="20" width="31" height="31"/>
+                                <color key="tintColor" name="MainColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                        <color key="backgroundColor" name="SecColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
@@ -72,13 +75,14 @@
                                             <constraint firstAttribute="width" constant="40" id="GeH-Tr-cl2"/>
                                             <constraint firstAttribute="height" constant="40" id="rfV-8B-QXR"/>
                                         </constraints>
+                                        <color key="tintColor" name="MainColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="-" cornerStyle="capsule"/>
                                         <connections>
                                             <action selector="minusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="74c-UH-VsR"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igT-QM-9iO">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igT-QM-9iO">
                                         <rect key="frame" x="50" y="5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="iAO-CW-VI2"/>
@@ -94,6 +98,7 @@
                                             <constraint firstAttribute="height" constant="40" id="JLK-AB-GHY"/>
                                             <constraint firstAttribute="width" constant="40" id="u0m-bV-fJU"/>
                                         </constraints>
+                                        <color key="tintColor" name="MainColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="+" cornerStyle="capsule"/>
                                         <connections>
@@ -102,6 +107,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KB-fd-8d1">
                                         <rect key="frame" x="150" y="5" width="204" height="40"/>
+                                        <color key="tintColor" name="MainColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Add to Cart" cornerStyle="capsule"/>
                                         <connections>
@@ -147,6 +153,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YsP-oC-h9J"/>
                     <connections>
+                        <outlet property="addButton" destination="7KB-fd-8d1" id="VDN-9u-BBC"/>
                         <outlet property="bottomImageVıew" destination="rMu-Hf-QtN" id="obg-xC-Ecb"/>
                         <outlet property="descriptionText" destination="ftm-Kt-acF" id="MgV-c5-MHb"/>
                         <outlet property="detailImageView" destination="2LZ-xZ-H3N" id="yi1-BR-cfX"/>
@@ -167,10 +174,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYf-8Z-DcY">
-                                <rect key="frame" x="0.0" y="222" width="414" height="674"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="bYf-8Z-DcY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="SecColor"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grocery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9i-1t-b5A">
                                 <rect key="frame" x="154.5" y="44" width="105" height="35"/>
@@ -192,7 +199,7 @@
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <connections>
@@ -203,7 +210,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQE-bs-6vX">
                                 <rect key="frame" x="20" y="300" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="MainColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r5Z-WZ-3Wr">
@@ -216,7 +223,7 @@
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <connections>
@@ -227,7 +234,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Deal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szT-us-3AR">
                                 <rect key="frame" x="20" y="434" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="MainColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IfP-G8-goJ">
@@ -237,7 +244,7 @@
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <connections>
@@ -250,16 +257,26 @@
                                 <items>
                                     <barButtonItem title="home" image="house" catalog="system" id="eF1-KY-Xsh"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="CRX-4a-tGn"/>
-                                    <barButtonItem title="favorites" image="heart" catalog="system" id="T50-oW-KQS"/>
+                                    <barButtonItem title="categories" image="category" id="T50-oW-KQS">
+                                        <color key="tintColor" name="MainColor"/>
+                                        <connections>
+                                            <action selector="categoriesPressed:" destination="5sM-aY-FQq" id="Log-R2-XfA"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mzE-t1-b0d"/>
-                                    <barButtonItem title="cart" image="cart" catalog="system" id="Dvr-bv-2GR"/>
+                                    <barButtonItem title="cart" image="cart" catalog="system" id="Dvr-bv-2GR">
+                                        <connections>
+                                            <action selector="cartButtonPressed:" destination="5sM-aY-FQq" id="exo-uf-ZJT"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eb1-AK-mT7"/>
                                     <barButtonItem title="profile" image="person" catalog="system" id="lCm-Q0-3tP"/>
                                 </items>
+                                <color key="tintColor" name="MainColor"/>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HFo-jM-zzX"/>
-                        <color key="backgroundColor" red="0.40400329229999998" green="0.83676189180000005" blue="0.41167855260000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="MainColor"/>
                         <constraints>
                             <constraint firstItem="N9i-1t-b5A" firstAttribute="centerX" secondItem="EOd-go-obA" secondAttribute="centerX" id="4dV-0U-bKN"/>
                             <constraint firstItem="cQE-bs-6vX" firstAttribute="leading" secondItem="HFo-jM-zzX" secondAttribute="leading" constant="20" id="677-vp-dh9"/>
@@ -293,27 +310,53 @@
                         <outlet property="midCollectionView" destination="r5Z-WZ-3Wr" id="SDu-38-pu5"/>
                         <outlet property="topCollectionView" destination="LeM-k2-vWB" id="b8N-Uh-v5n"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="detailScreenSeque" modalPresentationStyle="automatic" id="ZJc-Y2-KM4"/>
+                        <segue destination="OOg-ly-enY" kind="presentation" identifier="categoryScreenSeque" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="CSF-L3-jCo"/>
+                        <segue destination="Rx6-Av-1DB" kind="show" identifier="mainToCartSegue" id="j0Q-qf-KE4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yac-cG-pH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="137.94642857142856"/>
         </scene>
+        <!--CategoryScreenID-->
+        <scene sceneID="D0y-3P-QLX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Category" referencedIdentifier="CategoryScreenID" id="OOg-ly-enY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IDI-ya-DPa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0XQ-Gb-Ohf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="548"/>
+        </scene>
+        <!--CartSB-->
+        <scene sceneID="1br-pn-O7T">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cart" referencedIdentifier="CartSB" id="Rx6-Av-1DB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zGn-sa-Hyo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfm-Rf-yLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="536"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bg2" width="414" height="900"/>
         <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="category" width="24" height="24"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <namedColor name="MainColor">
+            <color red="0.40099999308586121" green="0.67000001668930054" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="SecColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

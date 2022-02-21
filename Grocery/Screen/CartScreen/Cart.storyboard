@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cart View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CartSB" id="Y6W-OH-hqX" customClass="CartViewController" customModule="Grocery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv5-Kp-A7Y">
+                                <rect key="frame" x="163" y="44" width="88" height="29"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q3v-bd-Rv4">
+                                <rect key="frame" x="20" y="81" width="374" height="681"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="aEj-Cp-vHB"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="jFF-nh-EPa"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnD-29-v2Q">
+                                <rect key="frame" x="20" y="762" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GHx-gH-Iat"/>
+                                </constraints>
+                                <color key="tintColor" name="MainColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go to Checkout" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="checkOutButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3CR-6Q-Kwf"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Empty Cart" translatesAutoresizingMaskIntoConstraints="NO" id="68i-wd-qVh">
+                                <rect key="frame" x="82" y="144" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="cGF-Qm-g4s"/>
+                                    <constraint firstAttribute="height" constant="250" id="m36-wU-tfR"/>
+                                </constraints>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAP-8J-Lsd">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zmu-LT-Cw6"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="home" image="house" catalog="system" id="Vv1-fF-sJH"/>
+                                </items>
+                                <color key="tintColor" name="MainColor"/>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AAP-8J-Lsd" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="AME-hf-Gh7"/>
+                            <constraint firstItem="q3v-bd-Rv4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="BAg-ok-U9a"/>
+                            <constraint firstItem="AAP-8J-Lsd" firstAttribute="top" secondItem="EnD-29-v2Q" secondAttribute="bottom" id="C5j-5O-8i3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="q3v-bd-Rv4" secondAttribute="trailing" constant="20" id="HGp-KB-cVJ"/>
+                            <constraint firstItem="fv5-Kp-A7Y" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NcK-rj-ycL"/>
+                            <constraint firstItem="AAP-8J-Lsd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="SiZ-LI-s3l"/>
+                            <constraint firstItem="AAP-8J-Lsd" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="cgz-sq-MTd"/>
+                            <constraint firstItem="EnD-29-v2Q" firstAttribute="top" secondItem="q3v-bd-Rv4" secondAttribute="bottom" id="huX-yO-gDY"/>
+                            <constraint firstItem="fv5-Kp-A7Y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="kdW-Ol-Bfw"/>
+                            <constraint firstItem="68i-wd-qVh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="kpg-rJ-3nU"/>
+                            <constraint firstItem="EnD-29-v2Q" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="nYv-F8-ULg"/>
+                            <constraint firstItem="68i-wd-qVh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pyo-Pu-iIm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EnD-29-v2Q" secondAttribute="trailing" constant="20" id="yNf-Lx-JE1"/>
+                            <constraint firstItem="q3v-bd-Rv4" firstAttribute="top" secondItem="fv5-Kp-A7Y" secondAttribute="bottom" constant="8" symbolic="YES" id="zhv-9E-5FL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emptyCartImage" destination="68i-wd-qVh" id="F9S-Wq-OOv"/>
+                        <outlet property="tableView" destination="q3v-bd-Rv4" id="GAY-R9-YNB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Empty Cart" width="250" height="250"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <namedColor name="MainColor">
+            <color red="0.40099999308586121" green="0.67000001668930054" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
