@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Checkout View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CheckoutSB" id="Y6W-OH-hqX" customClass="CheckoutViewController" customModule="Grocery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5Z-Ns-Hg6">
+                                <rect key="frame" x="20" y="56" width="125" height="35"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dzw-xh-Ztd">
+                                <rect key="frame" x="20" y="99" width="374" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="dPb-w0-1zs"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="r1P-IK-NhM"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="k1L-I3-nwI"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tr9-PH-EET">
+                                <rect key="frame" x="20" y="361" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="INU-lo-r4o"/>
+                                </constraints>
+                                <color key="tintColor" name="MainColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Place Order" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="placeOrderPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="k5H-Vb-U4b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oic-Ua-Tcg">
+                                <rect key="frame" x="354" y="56" width="40" height="31"/>
+                                <color key="tintColor" name="MainColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="multiply" catalog="system"/>
+                                <connections>
+                                    <action selector="dismissPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XvD-vC-FeU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.92497172969667352" green="0.99431648639717485" blue="0.95749237637649987" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oic-Ua-Tcg" secondAttribute="trailing" constant="20" id="4pq-gw-hEx"/>
+                            <constraint firstItem="h5Z-Ns-Hg6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="8Im-av-GC8"/>
+                            <constraint firstItem="Tr9-PH-EET" firstAttribute="top" secondItem="dzw-xh-Ztd" secondAttribute="bottom" constant="12" id="DwL-Nl-SfW"/>
+                            <constraint firstItem="h5Z-Ns-Hg6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="hPt-8n-EBQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Tr9-PH-EET" secondAttribute="trailing" constant="20" id="iIw-Jq-3Aa"/>
+                            <constraint firstItem="dzw-xh-Ztd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="lMP-sy-RCh"/>
+                            <constraint firstItem="oic-Ua-Tcg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="lU9-X2-KTF"/>
+                            <constraint firstItem="dzw-xh-Ztd" firstAttribute="top" secondItem="h5Z-Ns-Hg6" secondAttribute="bottom" constant="8" symbolic="YES" id="mis-mP-XRG"/>
+                            <constraint firstItem="Tr9-PH-EET" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="uuE-PB-4rM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dzw-xh-Ztd" secondAttribute="trailing" constant="20" id="zNk-nj-CiP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="dzw-xh-Ztd" id="EBB-0g-H2Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="multiply" catalog="system" width="128" height="111"/>
+        <namedColor name="MainColor">
+            <color red="0.40099999308586121" green="0.67000001668930054" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

@@ -20,6 +20,8 @@ struct K {
     static let itemCell = "itemCell"
     static let CartTableViewCell = "CartTableViewCell"
     static let cartCell = "cartCell"
+    static let CheckoutTableViewCell = "CheckoutTableViewCell"
+    static let checkoutCell = "checkoutCell"
     
     struct segues {
         static let detailScreenSeque = "detailScreenSeque"
@@ -28,9 +30,7 @@ struct K {
         static let mainToCartSegue = "mainToCartSegue"
         static let categoryToCart = "categoryToCart"
         static let mainToProfileSegue = "mainToProfileSegue"
-
-        
-        
+        static let cartToCheckoutSegue = "cartToCheckoutSegue"
     }
     
 }

@@ -17,6 +17,8 @@ class CartTableViewCell: UITableViewCell {
     var quantity = 1
     var increasePressed: (() -> ()) = {}
     var decreasePressed: (() -> ()) = {}
+    var deletePressed: (() -> ()) = {}
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,6 +41,7 @@ class CartTableViewCell: UITableViewCell {
     }
     
     @IBAction func removePressed(_ sender: UIButton) {
+        deletePressed()
     }
     
     @IBAction func plusPressed(_ sender: UIButton) {

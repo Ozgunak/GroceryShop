@@ -28,5 +28,13 @@ class CartFunctions {
             cartItems[index].quantity = newQuantity
         }
     }
+    static func calculateCart() -> Double {
+        var total = 0.0
+        cartItems.forEach { item in
+            let itemPrice = item.item.price * Double(item.quantity)
+            total = total + itemPrice
+        }
+        return total
+    }
     
 }

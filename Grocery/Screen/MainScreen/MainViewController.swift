@@ -115,7 +115,8 @@ extension MainViewController: UICollectionViewDataSource {
             return cell
         case botCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.botCell, for: indexPath) as! BottomCollectionViewCell
-            cell.botImageView.image = ItemFunctions.fruitItems[indexPath.row].image
+            cell.setupBot(item: ItemFunctions.fruitItems[indexPath.row])
+//            cell.botImageView.image = ItemFunctions.fruitItems[indexPath.row].image
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.botCell, for: indexPath)
@@ -133,7 +134,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         case midCollectionView:
             return CGSize(width: 80, height: 100)
         case botCollectionView:
-            return CGSize(width: 250, height: 250)
+            return CGSize(width: 250, height: 300)
         default:
             return CGSize.zero
         }

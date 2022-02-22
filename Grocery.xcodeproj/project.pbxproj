@@ -50,6 +50,10 @@
 		EFEE2FF027BFDBDD0015958C /* Discounts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEE2FEF27BFDBDD0015958C /* Discounts.xcassets */; };
 		EFEE2FF227BFEE210015958C /* CategoryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE2FF127BFEE210015958C /* CategoryFunctions.swift */; };
 		EFEE2FF427BFF2E30015958C /* Drinks.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEE2FF327BFF2E30015958C /* Drinks.xcassets */; };
+		EFFC51E927C590BE00FE8FD5 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC51E727C590BE00FE8FD5 /* CheckoutViewController.swift */; };
+		EFFC51EC27C5930500FE8FD5 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFC51EB27C5930500FE8FD5 /* Checkout.storyboard */; };
+		EFFC51EF27C5942C00FE8FD5 /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC51ED27C5942C00FE8FD5 /* CheckoutTableViewCell.swift */; };
+		EFFC51F027C5942C00FE8FD5 /* CheckoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFFC51EE27C5942C00FE8FD5 /* CheckoutTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +102,10 @@
 		EFEE2FEF27BFDBDD0015958C /* Discounts.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Discounts.xcassets; sourceTree = "<group>"; };
 		EFEE2FF127BFEE210015958C /* CategoryFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFunctions.swift; sourceTree = "<group>"; };
 		EFEE2FF327BFF2E30015958C /* Drinks.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Drinks.xcassets; sourceTree = "<group>"; };
+		EFFC51E727C590BE00FE8FD5 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		EFFC51EB27C5930500FE8FD5 /* Checkout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
+		EFFC51ED27C5942C00FE8FD5 /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
+		EFFC51EE27C5942C00FE8FD5 /* CheckoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,11 +243,23 @@
 				EFEE2FED27BFD9460015958C /* Main.storyboard */,
 				EF3AE70A27BEAD3000FFB562 /* MainScreen */,
 				EF3AE72227BFD13D00FFB562 /* DetailScreen */,
-				EF0FD66B27C3D7F9008AA049 /* CartScreen */,
 				EF0FD65327C1B678008AA049 /* CategoryScreen */,
+				EF0FD66B27C3D7F9008AA049 /* CartScreen */,
+				EFFC51E627C5909C00FE8FD5 /* CheckoutScreen */,
 				EF0FD67827C44810008AA049 /* ProfileScreen */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		EFFC51E627C5909C00FE8FD5 /* CheckoutScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EFFC51E727C590BE00FE8FD5 /* CheckoutViewController.swift */,
+				EFFC51EB27C5930500FE8FD5 /* Checkout.storyboard */,
+				EFFC51ED27C5942C00FE8FD5 /* CheckoutTableViewCell.swift */,
+				EFFC51EE27C5942C00FE8FD5 /* CheckoutTableViewCell.xib */,
+			);
+			path = CheckoutScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +330,8 @@
 				EFEE2FF427BFF2E30015958C /* Drinks.xcassets in Resources */,
 				EF0FD65227C1B40F008AA049 /* Categories.xcassets in Resources */,
 				EF0FD66727C29D42008AA049 /* Bakery.xcassets in Resources */,
+				EFFC51EC27C5930500FE8FD5 /* Checkout.storyboard in Resources */,
+				EFFC51F027C5942C00FE8FD5 /* CheckoutTableViewCell.xib in Resources */,
 				EFEE2FF027BFDBDD0015958C /* Discounts.xcassets in Resources */,
 				EF0FD66F27C3D83D008AA049 /* Cart.storyboard in Resources */,
 				EF3AE6FD27BEA5CD00FFB562 /* LaunchScreen.storyboard in Resources */,
@@ -334,6 +356,7 @@
 				EF0FD65A27C1BE32008AA049 /* CategoryCollectionViewCell.swift in Sources */,
 				EF3AE71927BEF56800FFB562 /* ItemModel.swift in Sources */,
 				EF3AE70D27BEAD6900FFB562 /* TopCollectionViewCell.swift in Sources */,
+				EFFC51E927C590BE00FE8FD5 /* CheckoutViewController.swift in Sources */,
 				EF3AE6F227BEA5CB00FFB562 /* DetailViewController.swift in Sources */,
 				EF3AE71F27BF014200FFB562 /* CategoriesModel.swift in Sources */,
 				EF3AE6EE27BEA5CB00FFB562 /* AppDelegate.swift in Sources */,
@@ -352,6 +375,7 @@
 				EF3AE70727BEA7B400FFB562 /* Constants.swift in Sources */,
 				EF0FD67127C3DC77008AA049 /* CartFunctions.swift in Sources */,
 				EF3AE71B27BEF80700FFB562 /* ItemFunctions.swift in Sources */,
+				EFFC51EF27C5942C00FE8FD5 /* CheckoutTableViewCell.swift in Sources */,
 				EF3AE71127BEECA600FFB562 /* MidCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
