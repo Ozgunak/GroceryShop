@@ -17,12 +17,20 @@ class CheckoutViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.register(UINib(nibName: K.CheckoutTableViewCell, bundle: nil), forCellReuseIdentifier: K.checkoutCell)
-        self.view.cornerRadius = 50
+//        self.view.cornerRadius = 50
     }
 
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == K.segues.resultSegue {
+//            if let resultVC = segue.destination as? ResultViewController {
+//                resultVC.sendedImage = #imageLiteral(resourceName: "success.png")
+//                resultVC.resultLabel.text = ""
+//            }
+//        }
+//    }
 
     @IBAction func placeOrderPressed(_ sender: UIButton) {
-        //TODO: Order Placed view
+        performSegue(withIdentifier: K.segues.resultSegue, sender: self)
     }
     @IBAction func dismissPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)

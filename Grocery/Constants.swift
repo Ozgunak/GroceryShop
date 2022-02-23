@@ -31,6 +31,9 @@ struct K {
         static let categoryToCart = "categoryToCart"
         static let mainToProfileSegue = "mainToProfileSegue"
         static let cartToCheckoutSegue = "cartToCheckoutSegue"
+        static let resultSegue = "resultSegue"
+
+        
     }
     
 }

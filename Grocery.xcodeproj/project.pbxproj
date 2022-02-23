@@ -54,6 +54,8 @@
 		EFFC51EC27C5930500FE8FD5 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFC51EB27C5930500FE8FD5 /* Checkout.storyboard */; };
 		EFFC51EF27C5942C00FE8FD5 /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC51ED27C5942C00FE8FD5 /* CheckoutTableViewCell.swift */; };
 		EFFC51F027C5942C00FE8FD5 /* CheckoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFFC51EE27C5942C00FE8FD5 /* CheckoutTableViewCell.xib */; };
+		EFFC51F327C5A6F200FE8FD5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC51F227C5A6F200FE8FD5 /* ResultViewController.swift */; };
+		EFFC51F527C5A77200FE8FD5 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFC51F427C5A77200FE8FD5 /* Result.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +108,8 @@
 		EFFC51EB27C5930500FE8FD5 /* Checkout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
 		EFFC51ED27C5942C00FE8FD5 /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		EFFC51EE27C5942C00FE8FD5 /* CheckoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutTableViewCell.xib; sourceTree = "<group>"; };
+		EFFC51F227C5A6F200FE8FD5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		EFFC51F427C5A77200FE8FD5 /* Result.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Result.storyboard; path = Grocery/Screen/ResultScreen/Result.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +250,7 @@
 				EF0FD65327C1B678008AA049 /* CategoryScreen */,
 				EF0FD66B27C3D7F9008AA049 /* CartScreen */,
 				EFFC51E627C5909C00FE8FD5 /* CheckoutScreen */,
+				EFFC51F127C5A6BB00FE8FD5 /* ResultScreen */,
 				EF0FD67827C44810008AA049 /* ProfileScreen */,
 			);
 			path = Screen;
@@ -260,6 +265,15 @@
 				EFFC51EE27C5942C00FE8FD5 /* CheckoutTableViewCell.xib */,
 			);
 			path = CheckoutScreen;
+			sourceTree = "<group>";
+		};
+		EFFC51F127C5A6BB00FE8FD5 /* ResultScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EFFC51F427C5A77200FE8FD5 /* Result.storyboard */,
+				EFFC51F227C5A6F200FE8FD5 /* ResultViewController.swift */,
+			);
+			path = ResultScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFFC51F527C5A77200FE8FD5 /* Result.storyboard in Resources */,
 				EF0FD65F27C26278008AA049 /* ItemsCollectionViewCell.xib in Resources */,
 				EF0FD65B27C1BE32008AA049 /* CategoryCollectionViewCell.xib in Resources */,
 				EF0FD67C27C4483D008AA049 /* Profile.storyboard in Resources */,
@@ -365,6 +380,7 @@
 				EF3AE71527BEF29500FFB562 /* BottomCollectionViewCell.swift in Sources */,
 				EF3AE6F027BEA5CB00FFB562 /* SceneDelegate.swift in Sources */,
 				EF0FD66D27C3D81E008AA049 /* CartViewController.swift in Sources */,
+				EFFC51F327C5A6F200FE8FD5 /* ResultViewController.swift in Sources */,
 				EF0FD65E27C26278008AA049 /* ItemsCollectionViewCell.swift in Sources */,
 				EF3AE70927BEA86500FFB562 /* MainViewController.swift in Sources */,
 				EF3AE6F827BEA5CB00FFB562 /* Grocery.xcdatamodeld in Sources */,

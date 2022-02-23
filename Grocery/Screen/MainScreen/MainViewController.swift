@@ -44,6 +44,7 @@ class MainViewController: UIViewController {
     @IBAction func profilePressed(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: K.segues.mainToProfileSegue, sender: self)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.segues.detailScreenSeque {
             if let DetailVC = segue.destination as? DetailViewController {

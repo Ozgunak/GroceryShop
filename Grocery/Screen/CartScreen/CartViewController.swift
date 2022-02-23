@@ -34,14 +34,12 @@ class CartViewController: UIViewController, UIViewControllerTransitioningDelegat
     
 
     @IBAction func checkOutButtonPressed(_ sender: UIButton) {
-//        performSegue(withIdentifier: K.segues.cartToCheckoutSegue, sender: self)
-        let storyboard = UIStoryboard(name: "Checkout", bundle: nil)
-        let pvc = storyboard.instantiateViewController(withIdentifier: "CheckoutSB")
-
-                pvc.modalPresentationStyle = .custom
-                pvc.transitioningDelegate = self
-
-                present(pvc, animated: true)
+        performSegue(withIdentifier: K.segues.cartToCheckoutSegue, sender: self)
+//        let storyboard = UIStoryboard(name: "Checkout", bundle: nil)
+//        let pvc = storyboard.instantiateViewController(withIdentifier: "CheckoutSB")
+//        pvc.modalPresentationStyle = .custom
+//        pvc.transitioningDelegate = self
+//        present(pvc, animated: true)
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
